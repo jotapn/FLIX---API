@@ -33,6 +33,14 @@
         "documentation": {}
     },
     {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -41,11 +49,116 @@
         "documentation": {}
     },
     {
+        "label": "genre_create_list_view",
+        "importPath": "genres.views",
+        "description": "genres.views",
+        "isExtraImport": true,
+        "detail": "genres.views",
+        "documentation": {}
+    },
+    {
+        "label": "genre_detail_view",
+        "importPath": "genres.views",
+        "description": "genres.views",
+        "isExtraImport": true,
+        "detail": "genres.views",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
         "isExtraImport": true,
         "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "Genre",
+        "importPath": "genres.models",
+        "description": "genres.models",
+        "isExtraImport": true,
+        "detail": "genres.models",
+        "documentation": {}
+    },
+    {
+        "label": "Genre",
+        "importPath": "genres.models",
+        "description": "genres.models",
+        "isExtraImport": true,
+        "detail": "genres.models",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
         "documentation": {}
     },
     {
@@ -98,7 +211,7 @@
         "kind": 5,
         "importPath": "app.settings",
         "description": "app.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'genres',",
         "detail": "app.settings",
         "documentation": {}
     },
@@ -107,7 +220,7 @@
         "kind": 5,
         "importPath": "app.settings",
         "description": "app.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nMIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'genres',\n]\nMIDDLEWARE = [",
         "detail": "app.settings",
         "documentation": {}
     },
@@ -170,7 +283,7 @@
         "kind": 5,
         "importPath": "app.settings",
         "description": "app.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "LANGUAGE_CODE = 'pt-Br'\nTIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "app.settings",
         "documentation": {}
     },
@@ -179,7 +292,7 @@
         "kind": 5,
         "importPath": "app.settings",
         "description": "app.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "TIME_ZONE = 'America/Sao_Paulo'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "app.settings",
         "documentation": {}
     },
@@ -224,7 +337,7 @@
         "kind": 5,
         "importPath": "app.urls",
         "description": "app.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('genres/', genre_create_list_view, name='genre-create-list'),\n    path('genres/<int:pk>', genre_detail_view, name='genre-detail-view')\n]",
         "detail": "app.urls",
         "documentation": {}
     },
@@ -235,6 +348,60 @@
         "description": "app.wsgi",
         "peekOfCode": "application = get_wsgi_application()",
         "detail": "app.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "genres.migrations.0001_initial",
+        "description": "genres.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Genre',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=200)),",
+        "detail": "genres.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "GenreAdmin",
+        "kind": 6,
+        "importPath": "genres.admin",
+        "description": "genres.admin",
+        "peekOfCode": "class GenreAdmin(admin.ModelAdmin):\n    list_display = ('id', 'name')",
+        "detail": "genres.admin",
+        "documentation": {}
+    },
+    {
+        "label": "GenresConfig",
+        "kind": 6,
+        "importPath": "genres.apps",
+        "description": "genres.apps",
+        "peekOfCode": "class GenresConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'genres'",
+        "detail": "genres.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Genre",
+        "kind": 6,
+        "importPath": "genres.models",
+        "description": "genres.models",
+        "peekOfCode": "class Genre(models.Model):\n    name = models.CharField(max_length=200)\n    def __str__(self) -> str:\n        return self.name",
+        "detail": "genres.models",
+        "documentation": {}
+    },
+    {
+        "label": "genre_create_list_view",
+        "kind": 2,
+        "importPath": "genres.views",
+        "description": "genres.views",
+        "peekOfCode": "def genre_create_list_view(request):\n    if request.method == 'GET':\n        genres = Genre.objects.all()\n        data = [{'id': genre.id, 'name': genre.name} for genre in genres]\n        return JsonResponse(data, safe=False)\n    elif request.method == 'POST':\n        data = json.loads(request.body.decode('utf-8'))\n        new_genre = Genre(name=data['name'])\n        new_genre.save()\n        return JsonResponse(",
+        "detail": "genres.views",
+        "documentation": {}
+    },
+    {
+        "label": "genre_detail_view",
+        "kind": 2,
+        "importPath": "genres.views",
+        "description": "genres.views",
+        "peekOfCode": "def genre_detail_view(request, pk):\n    genre = get_object_or_404(Genre, pk=pk) \n    if request.method == 'GET':\n        data = {'id' : genre.id, \"name\": genre.name}\n        return JsonResponse(data)\n    elif request.method == 'PUT':\n        data = json.loads(request.body.decode('utf-8'))\n        genre.name = data['name']\n        genre.save()\n        return JsonResponse(",
+        "detail": "genres.views",
         "documentation": {}
     },
     {
