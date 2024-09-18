@@ -1,5 +1,117 @@
 [
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
         "label": "os",
         "kind": 6,
         "isExtraImport": true,
@@ -22,22 +134,6 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
         "documentation": {}
     },
     {
@@ -73,30 +169,6 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "Genre",
         "importPath": "genres.models",
         "description": "genres.models",
@@ -118,14 +190,6 @@
         "description": "genres.models",
         "isExtraImport": true,
         "detail": "genres.models",
-        "documentation": {}
-    },
-    {
-        "label": "AppConfig",
-        "importPath": "django.apps",
-        "description": "django.apps",
-        "isExtraImport": true,
-        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -145,14 +209,6 @@
         "documentation": {}
     },
     {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
-        "isExtraImport": true,
-        "detail": "django.test",
-        "documentation": {}
-    },
-    {
         "label": "GenreSerializer",
         "importPath": "genres.serializers",
         "description": "genres.serializers",
@@ -167,6 +223,42 @@
         "importPath": "sys",
         "description": "sys",
         "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "actors.migrations.0001_initial",
+        "description": "actors.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Actor',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=200)),",
+        "detail": "actors.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "ActorsConfig",
+        "kind": 6,
+        "importPath": "actors.apps",
+        "description": "actors.apps",
+        "peekOfCode": "class ActorsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'actors'",
+        "detail": "actors.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Actor",
+        "kind": 6,
+        "importPath": "actors.models",
+        "description": "actors.models",
+        "peekOfCode": "class Actor(models.Model):\n    name = models.CharField(max_length=200)\n    birthday = models.DateField(null=True, blank=True)\n    nationality = models.CharField(\n        max_length=100,\n        choices=NATIONALITY_CHOICES,\n        blank=True,\n        null=True,\n    )\n    def __str__(self) -> str:",
+        "detail": "actors.models",
+        "documentation": {}
+    },
+    {
+        "label": "NATIONALITY_CHOICES",
+        "kind": 5,
+        "importPath": "actors.models",
+        "description": "actors.models",
+        "peekOfCode": "NATIONALITY_CHOICES = (\n    ('AF', 'Afghanistan'),\n    ('AL', 'Albania'),\n    ('DZ', 'Algeria'),\n    ('AO', 'Angola'),\n    ('AR', 'Argentina'),\n    ('AM', 'Armenia'),\n    ('AU', 'Australia'),\n    ('AT', 'Austria'),\n    ('AZ', 'Azerbaijan'),",
+        "detail": "actors.models",
         "documentation": {}
     },
     {
@@ -219,7 +311,7 @@
         "kind": 5,
         "importPath": "app.settings",
         "description": "app.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'genres',\n]",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'rest_framework',\n    'genres',\n    'actors',",
         "detail": "app.settings",
         "documentation": {}
     },
