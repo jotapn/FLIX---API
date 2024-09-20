@@ -88,11 +88,51 @@
         "documentation": {}
     },
     {
-        "label": "TestCase",
-        "importPath": "django.test",
-        "description": "django.test",
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
         "isExtraImport": true,
-        "detail": "django.test",
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "generics",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "generics",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "Actor",
+        "importPath": "actors.models",
+        "description": "actors.models",
+        "isExtraImport": true,
+        "detail": "actors.models",
+        "documentation": {}
+    },
+    {
+        "label": "Actor",
+        "importPath": "actors.models",
+        "description": "actors.models",
+        "isExtraImport": true,
+        "detail": "actors.models",
         "documentation": {}
     },
     {
@@ -104,11 +144,19 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
         "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "ActorSerializer",
+        "importPath": "actors.serializers",
+        "description": "actors.serializers",
+        "isExtraImport": true,
+        "detail": "actors.serializers",
         "documentation": {}
     },
     {
@@ -161,6 +209,22 @@
         "documentation": {}
     },
     {
+        "label": "ActorCreateListView",
+        "importPath": "actors.views",
+        "description": "actors.views",
+        "isExtraImport": true,
+        "detail": "actors.views",
+        "documentation": {}
+    },
+    {
+        "label": "ActorRetrieveUpdateDestroyView",
+        "importPath": "actors.views",
+        "description": "actors.views",
+        "isExtraImport": true,
+        "detail": "actors.views",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -190,22 +254,6 @@
         "description": "genres.models",
         "isExtraImport": true,
         "detail": "genres.models",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "generics",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
         "documentation": {}
     },
     {
@@ -259,6 +307,33 @@
         "description": "actors.models",
         "peekOfCode": "NATIONALITY_CHOICES = (\n    ('AF', 'Afghanistan'),\n    ('AL', 'Albania'),\n    ('DZ', 'Algeria'),\n    ('AO', 'Angola'),\n    ('AR', 'Argentina'),\n    ('AM', 'Armenia'),\n    ('AU', 'Australia'),\n    ('AT', 'Austria'),\n    ('AZ', 'Azerbaijan'),",
         "detail": "actors.models",
+        "documentation": {}
+    },
+    {
+        "label": "ActorSerializer",
+        "kind": 6,
+        "importPath": "actors.serializers",
+        "description": "actors.serializers",
+        "peekOfCode": "class ActorSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Actor\n        fields = '__all__'",
+        "detail": "actors.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ActorCreateListView",
+        "kind": 6,
+        "importPath": "actors.views",
+        "description": "actors.views",
+        "peekOfCode": "class ActorCreateListView(generics.ListCreateAPIView):\n    queryset = Actor.objects.all()\n    serializer_class = ActorSerializer\nclass ActorRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    queryset = Actor.objects.all()\n    serializer_class = ActorSerializer",
+        "detail": "actors.views",
+        "documentation": {}
+    },
+    {
+        "label": "ActorRetrieveUpdateDestroyView",
+        "kind": 6,
+        "importPath": "actors.views",
+        "description": "actors.views",
+        "peekOfCode": "class ActorRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    queryset = Actor.objects.all()\n    serializer_class = ActorSerializer",
+        "detail": "actors.views",
         "documentation": {}
     },
     {
@@ -428,7 +503,7 @@
         "kind": 5,
         "importPath": "app.urls",
         "description": "app.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('genres/', GenreCreateListView.as_view(), name='genre-create-list'),\n    path('genres/<int:pk>', GenreRetrieveUpdateDestroyView.as_view(), name='genre-detail-view')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('genres/', GenreCreateListView.as_view(), name='genre-create-list'),\n    path('genres/<int:pk>', GenreRetrieveUpdateDestroyView.as_view(), name='genre-detail-view'),\n    path('actors/', ActorCreateListView.as_view(), name='actor-create-list'),\n    path('actors/<int:pk>', ActorRetrieveUpdateDestroyView.as_view(), name='actor-detail-view')\n]",
         "detail": "app.urls",
         "documentation": {}
     },
