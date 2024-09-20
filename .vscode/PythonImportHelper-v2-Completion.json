@@ -81,6 +81,38 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
         "label": "admin",
         "importPath": "django.contrib",
         "description": "django.contrib",
@@ -169,19 +201,11 @@
         "documentation": {}
     },
     {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
         "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "generics",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
+        "detail": "django.apps",
         "documentation": {}
     },
     {
@@ -214,6 +238,30 @@
         "description": "rest_framework",
         "isExtraImport": true,
         "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "generics",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
         "documentation": {}
     },
     {
@@ -411,11 +459,52 @@
         "documentation": {}
     },
     {
+        "label": "Movie",
+        "importPath": "movies.models",
+        "description": "movies.models",
+        "isExtraImport": true,
+        "detail": "movies.models",
+        "documentation": {}
+    },
+    {
         "label": "MovieSerializer",
         "importPath": "movies.serializers",
         "description": "movies.serializers",
         "isExtraImport": true,
         "detail": "movies.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "django.core.validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "MinValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "MaxValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -803,6 +892,33 @@
         "description": "movies.views",
         "peekOfCode": "class MovieRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    queryset = Movie.objects.all()\n    serializer_class = MovieSerializer",
         "detail": "movies.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "reviews.migrations.0001_initial",
+        "description": "reviews.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('movies', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Review',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "reviews.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewsConfig",
+        "kind": 6,
+        "importPath": "reviews.apps",
+        "description": "reviews.apps",
+        "peekOfCode": "class ReviewsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'reviews'",
+        "detail": "reviews.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Review",
+        "kind": 6,
+        "importPath": "reviews.models",
+        "description": "reviews.models",
+        "peekOfCode": "class Review(models.Model):\n    movie = models.ForeignKey(Movie,\n                               on_delete=models.PROTECT,\n                               related_name='reviews')\n    stars = models.IntegerField(\n        validators=[\n            MinValueValidator(0, 'Avaliação não pode ser inferior a 0 estrelas'),\n            MaxValueValidator(5, 'Avaliação não pode ser superior a 5 estrelas')\n        ]\n    )",
+        "detail": "reviews.models",
         "documentation": {}
     },
     {
