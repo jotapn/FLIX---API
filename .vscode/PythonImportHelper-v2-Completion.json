@@ -305,6 +305,54 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "ActorSerializer",
         "importPath": "actors.serializers",
         "description": "actors.serializers",
@@ -335,78 +383,6 @@
         "description": "pathlib",
         "isExtraImport": true,
         "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "GenreCreateListView",
-        "importPath": "genres.views",
-        "description": "genres.views",
-        "isExtraImport": true,
-        "detail": "genres.views",
-        "documentation": {}
-    },
-    {
-        "label": "GenreRetrieveUpdateDestroyView",
-        "importPath": "genres.views",
-        "description": "genres.views",
-        "isExtraImport": true,
-        "detail": "genres.views",
-        "documentation": {}
-    },
-    {
-        "label": "ActorCreateListView",
-        "importPath": "actors.views",
-        "description": "actors.views",
-        "isExtraImport": true,
-        "detail": "actors.views",
-        "documentation": {}
-    },
-    {
-        "label": "ActorRetrieveUpdateDestroyView",
-        "importPath": "actors.views",
-        "description": "actors.views",
-        "isExtraImport": true,
-        "detail": "actors.views",
-        "documentation": {}
-    },
-    {
-        "label": "MovieCreateListView",
-        "importPath": "movies.views",
-        "description": "movies.views",
-        "isExtraImport": true,
-        "detail": "movies.views",
-        "documentation": {}
-    },
-    {
-        "label": "MovieRetrieveUpdateDestroyView",
-        "importPath": "movies.views",
-        "description": "movies.views",
-        "isExtraImport": true,
-        "detail": "movies.views",
-        "documentation": {}
-    },
-    {
-        "label": "ReviewCreateListView",
-        "importPath": "reviews.views",
-        "description": "reviews.views",
-        "isExtraImport": true,
-        "detail": "reviews.views",
-        "documentation": {}
-    },
-    {
-        "label": "ReviewRetrieveUpdateDestroyView",
-        "importPath": "reviews.views",
-        "description": "reviews.views",
-        "isExtraImport": true,
-        "detail": "reviews.views",
         "documentation": {}
     },
     {
@@ -627,6 +603,15 @@
         "documentation": {}
     },
     {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "actors.urls",
+        "description": "actors.urls",
+        "peekOfCode": "urlpatterns = [\n    path('actors/', views.ActorCreateListView.as_view(), name='actor-create-list'),\n    path('actors/<int:pk>', views.ActorRetrieveUpdateDestroyView.as_view(), name='actor-detail-view'),\n]",
+        "detail": "actors.urls",
+        "documentation": {}
+    },
+    {
         "label": "ActorCreateListView",
         "kind": 6,
         "importPath": "actors.views",
@@ -811,7 +796,7 @@
         "kind": 5,
         "importPath": "app.urls",
         "description": "app.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('genres/', GenreCreateListView.as_view(), name='genre-create-list'),\n    path('genres/<int:pk>', GenreRetrieveUpdateDestroyView.as_view(), name='genre-detail-view'),\n    path('actors/', ActorCreateListView.as_view(), name='actor-create-list'),\n    path('actors/<int:pk>', ActorRetrieveUpdateDestroyView.as_view(), name='actor-detail-view'),\n    path('movies/', MovieCreateListView.as_view(), name='movie-create-list'),\n    path('movies/<int:pk>', MovieRetrieveUpdateDestroyView.as_view(), name='movie-detail-view'),\n    path('reviews/', ReviewCreateListView.as_view(), name='review-create-list'),\n    path('reviews/<int:pk>', ReviewRetrieveUpdateDestroyView.as_view(), name='review-detail-view'),",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('api/v1/', include('genres.urls')),\n    path('api/v1/', include('actors.urls')),\n    path('api/v1/', include('movies.urls')),\n    path('api/v1/', include('reviews.urls')),    \n]",
         "detail": "app.urls",
         "documentation": {}
     },
@@ -867,6 +852,15 @@
         "description": "genres.serializers",
         "peekOfCode": "class GenreSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Genre\n        fields = '__all__'",
         "detail": "genres.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "genres.urls",
+        "description": "genres.urls",
+        "peekOfCode": "urlpatterns = [\n    path('genres/', views.GenreCreateListView.as_view(), name='genre-create-list'),\n    path('genres/<int:pk>', views.GenreRetrieveUpdateDestroyView.as_view(), name='genre-detail-view'),\n]",
+        "detail": "genres.urls",
         "documentation": {}
     },
     {
@@ -933,6 +927,15 @@
         "documentation": {}
     },
     {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "movies.urls",
+        "description": "movies.urls",
+        "peekOfCode": "urlpatterns = [\n    path('movies/', views.MovieCreateListView.as_view(), name='movie-create-list'),\n    path('movies/<int:pk>', views.MovieRetrieveUpdateDestroyView.as_view(), name='movie-detail-view'),\n]",
+        "detail": "movies.urls",
+        "documentation": {}
+    },
+    {
         "label": "MovieCreateListView",
         "kind": 6,
         "importPath": "movies.views",
@@ -993,6 +996,15 @@
         "description": "reviews.serializers",
         "peekOfCode": "class ReviewSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Review\n        fields = '__all__'",
         "detail": "reviews.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "reviews.urls",
+        "description": "reviews.urls",
+        "peekOfCode": "urlpatterns = [\n    path('reviews/', views.ReviewCreateListView.as_view(), name='review-create-list'),\n    path('reviews/<int:pk>', views.ReviewRetrieveUpdateDestroyView.as_view(), name='review-detail-view'),\n]",
+        "detail": "reviews.urls",
         "documentation": {}
     },
     {
