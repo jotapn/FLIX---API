@@ -257,6 +257,22 @@
         "documentation": {}
     },
     {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "generics",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
@@ -375,6 +391,22 @@
         "description": "movies.views",
         "isExtraImport": true,
         "detail": "movies.views",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewCreateListView",
+        "importPath": "reviews.views",
+        "description": "reviews.views",
+        "isExtraImport": true,
+        "detail": "reviews.views",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewRetrieveUpdateDestroyView",
+        "importPath": "reviews.views",
+        "description": "reviews.views",
+        "isExtraImport": true,
+        "detail": "reviews.views",
         "documentation": {}
     },
     {
@@ -500,11 +532,35 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
+        "label": "Review",
+        "importPath": "reviews.models",
+        "description": "reviews.models",
         "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "reviews.models",
+        "documentation": {}
+    },
+    {
+        "label": "Review",
+        "importPath": "reviews.models",
+        "description": "reviews.models",
+        "isExtraImport": true,
+        "detail": "reviews.models",
+        "documentation": {}
+    },
+    {
+        "label": "Review",
+        "importPath": "reviews.models",
+        "description": "reviews.models",
+        "isExtraImport": true,
+        "detail": "reviews.models",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewSerializer",
+        "importPath": "reviews.serializers",
+        "description": "reviews.serializers",
+        "isExtraImport": true,
+        "detail": "reviews.serializers",
         "documentation": {}
     },
     {
@@ -755,7 +811,7 @@
         "kind": 5,
         "importPath": "app.urls",
         "description": "app.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('genres/', GenreCreateListView.as_view(), name='genre-create-list'),\n    path('genres/<int:pk>', GenreRetrieveUpdateDestroyView.as_view(), name='genre-detail-view'),\n    path('actors/', ActorCreateListView.as_view(), name='actor-create-list'),\n    path('actors/<int:pk>', ActorRetrieveUpdateDestroyView.as_view(), name='actor-detail-view'),\n    path('movies/', MovieCreateListView.as_view(), name='movie-create-list'),\n    path('movies/<int:pk>', MovieRetrieveUpdateDestroyView.as_view(), name='movie-detail-view')\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('genres/', GenreCreateListView.as_view(), name='genre-create-list'),\n    path('genres/<int:pk>', GenreRetrieveUpdateDestroyView.as_view(), name='genre-detail-view'),\n    path('actors/', ActorCreateListView.as_view(), name='actor-create-list'),\n    path('actors/<int:pk>', ActorRetrieveUpdateDestroyView.as_view(), name='actor-detail-view'),\n    path('movies/', MovieCreateListView.as_view(), name='movie-create-list'),\n    path('movies/<int:pk>', MovieRetrieveUpdateDestroyView.as_view(), name='movie-detail-view'),\n    path('reviews/', ReviewCreateListView.as_view(), name='review-create-list'),\n    path('reviews/<int:pk>', ReviewRetrieveUpdateDestroyView.as_view(), name='review-detail-view'),",
         "detail": "app.urls",
         "documentation": {}
     },
@@ -904,6 +960,15 @@
         "documentation": {}
     },
     {
+        "label": "ReviewAdmin",
+        "kind": 6,
+        "importPath": "reviews.admin",
+        "description": "reviews.admin",
+        "peekOfCode": "class ReviewAdmin(admin.ModelAdmin):\n    list_display = ('id', 'movie', 'stars', 'comment')",
+        "detail": "reviews.admin",
+        "documentation": {}
+    },
+    {
         "label": "ReviewsConfig",
         "kind": 6,
         "importPath": "reviews.apps",
@@ -919,6 +984,33 @@
         "description": "reviews.models",
         "peekOfCode": "class Review(models.Model):\n    movie = models.ForeignKey(Movie,\n                               on_delete=models.PROTECT,\n                               related_name='reviews')\n    stars = models.IntegerField(\n        validators=[\n            MinValueValidator(0, 'Avaliação não pode ser inferior a 0 estrelas'),\n            MaxValueValidator(5, 'Avaliação não pode ser superior a 5 estrelas')\n        ]\n    )",
         "detail": "reviews.models",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewSerializer",
+        "kind": 6,
+        "importPath": "reviews.serializers",
+        "description": "reviews.serializers",
+        "peekOfCode": "class ReviewSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Review\n        fields = '__all__'",
+        "detail": "reviews.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewCreateListView",
+        "kind": 6,
+        "importPath": "reviews.views",
+        "description": "reviews.views",
+        "peekOfCode": "class ReviewCreateListView(generics.ListCreateAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer\nclass ReviewRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer",
+        "detail": "reviews.views",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewRetrieveUpdateDestroyView",
+        "kind": 6,
+        "importPath": "reviews.views",
+        "description": "reviews.views",
+        "peekOfCode": "class ReviewRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer",
+        "detail": "reviews.views",
         "documentation": {}
     },
     {
