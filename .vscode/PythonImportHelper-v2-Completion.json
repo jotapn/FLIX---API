@@ -369,6 +369,38 @@
         "documentation": {}
     },
     {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
         "label": "ActorSerializer",
         "importPath": "actors.serializers",
         "description": "actors.serializers",
@@ -664,7 +696,7 @@
         "kind": 6,
         "importPath": "actors.views",
         "description": "actors.views",
-        "peekOfCode": "class ActorCreateListView(generics.ListCreateAPIView):\n    queryset = Actor.objects.all()\n    serializer_class = ActorSerializer\nclass ActorRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    queryset = Actor.objects.all()\n    serializer_class = ActorSerializer",
+        "peekOfCode": "class ActorCreateListView(generics.ListCreateAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Actor.objects.all()\n    serializer_class = ActorSerializer\nclass ActorRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Actor.objects.all()\n    serializer_class = ActorSerializer",
         "detail": "actors.views",
         "documentation": {}
     },
@@ -673,7 +705,7 @@
         "kind": 6,
         "importPath": "actors.views",
         "description": "actors.views",
-        "peekOfCode": "class ActorRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    queryset = Actor.objects.all()\n    serializer_class = ActorSerializer",
+        "peekOfCode": "class ActorRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Actor.objects.all()\n    serializer_class = ActorSerializer",
         "detail": "actors.views",
         "documentation": {}
     },
@@ -943,7 +975,7 @@
         "kind": 6,
         "importPath": "genres.views",
         "description": "genres.views",
-        "peekOfCode": "class GenreCreateListView(generics.ListCreateAPIView):\n    queryset = Genre.objects.all()\n    serializer_class = GenreSerializer\nclass GenreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Genre.objects.all()\n    serializer_class = GenreSerializer",
+        "peekOfCode": "class GenreCreateListView(generics.ListCreateAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Genre.objects.all()\n    serializer_class = GenreSerializer\nclass GenreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Genre.objects.all()\n    serializer_class = GenreSerializer",
         "detail": "genres.views",
         "documentation": {}
     },
@@ -952,7 +984,7 @@
         "kind": 6,
         "importPath": "genres.views",
         "description": "genres.views",
-        "peekOfCode": "class GenreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Genre.objects.all()\n    serializer_class = GenreSerializer",
+        "peekOfCode": "class GenreRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Genre.objects.all()\n    serializer_class = GenreSerializer",
         "detail": "genres.views",
         "documentation": {}
     },
@@ -1015,7 +1047,7 @@
         "kind": 6,
         "importPath": "movies.views",
         "description": "movies.views",
-        "peekOfCode": "class MovieCreateListView(generics.ListCreateAPIView):\n    queryset = Movie.objects.all()\n    serializer_class = MovieSerializer\nclass MovieRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    queryset = Movie.objects.all()\n    serializer_class = MovieSerializer",
+        "peekOfCode": "class MovieCreateListView(generics.ListCreateAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Movie.objects.all()\n    serializer_class = MovieSerializer\nclass MovieRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Movie.objects.all()\n    serializer_class = MovieSerializer",
         "detail": "movies.views",
         "documentation": {}
     },
@@ -1024,7 +1056,7 @@
         "kind": 6,
         "importPath": "movies.views",
         "description": "movies.views",
-        "peekOfCode": "class MovieRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    queryset = Movie.objects.all()\n    serializer_class = MovieSerializer",
+        "peekOfCode": "class MovieRetrieveUpdateDestroyView(generics.RetrieveUpdateAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Movie.objects.all()\n    serializer_class = MovieSerializer",
         "detail": "movies.views",
         "documentation": {}
     },
@@ -1087,7 +1119,7 @@
         "kind": 6,
         "importPath": "reviews.views",
         "description": "reviews.views",
-        "peekOfCode": "class ReviewCreateListView(generics.ListCreateAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer\nclass ReviewRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer",
+        "peekOfCode": "class ReviewCreateListView(generics.ListCreateAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer\nclass ReviewRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer",
         "detail": "reviews.views",
         "documentation": {}
     },
@@ -1096,7 +1128,7 @@
         "kind": 6,
         "importPath": "reviews.views",
         "description": "reviews.views",
-        "peekOfCode": "class ReviewRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer",
+        "peekOfCode": "class ReviewRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):\n    permission_classes = (IsAuthenticated,)\n    queryset = Review.objects.all()\n    serializer_class = ReviewSerializer",
         "detail": "reviews.views",
         "documentation": {}
     },
